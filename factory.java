@@ -1,23 +1,25 @@
 import java.util.*;
 
+
 public class factory {
 
     //use getShape method to get object of type shape
-    public Object getList(String shapeType){
+    public AbstractSet  getList(String shapeType){
         if(shapeType == null){
             return null;
         }
         if(shapeType.equalsIgnoreCase("HashSet")){
             return  new HashSet();
-
-
         } else if(shapeType.equalsIgnoreCase("TreeSet")){
-            return new TreeSet();
-
+            return  new TreeSet();
         } else if(shapeType.equalsIgnoreCase("LinkedHashSet")){
-            return new LinkedHashSet();
+            return  new LinkedHashSet();
+
         }
 
         return null;
+
+
     }
+
 }

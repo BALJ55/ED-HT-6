@@ -15,19 +15,19 @@ public class mainHT {
 
                 factory ListFactory = new factory();
 
-                Object web = ListFactory.getList(type);
-                Object java = ListFactory.getList(type);
-                Object cel = ListFactory.getList(type);
+                AbstractSet web = ListFactory.getList(type);
+                AbstractSet java = ListFactory.getList(type);
+                AbstractSet cel = ListFactory.getList(type);
                 int webc=0;
                 int javac=0;
                 int celc=0;
 
                 while(addnew){
-                    System.out.println("Desea agregar otro desarrollador? 'S/N'");
-                    String dev = scan.next();
-                    if(dev=="S"){
+                    System.out.println("Desea agregar otro desarrollador? '1/0'");
+                    int ynn = scan.nextInt();
+                    if(ynn==1){
                         System.out.println("Ingrese el nombre del desarrollador");
-                        dev = scan.next();
+                        String dev = scan.next();
                         System.out.println("Ingrese el tipo de desarrollador:");
                         System.out.println("1) dessarrollador web");
                         System.out.println("2) dessarrollador java");
@@ -40,9 +40,21 @@ public class mainHT {
                 }
 
 
+                System.out.println("cantidad de desarrolladores web: "+webc);
+                System.out.println("cantidad de desarrolladores java: "+javac);
+                System.out.println("cantidad de desarrolladores celular: "+celc);
+                System.out.println("Desarrolladores web: "+web);
+                System.out.println("Desarrolladores java: "+java);
+                System.out.println("Desarrolladores celular: "+cel);
 
 
-            }catch (exception E){
+                System.out.println("Saliendo...");
+                error=false;
+
+
+
+
+            }catch (Exception E){
                 System.out.println("usted ingresó algo arroneo");
                 error=true;
             }
